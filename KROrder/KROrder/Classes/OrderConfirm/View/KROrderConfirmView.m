@@ -8,6 +8,7 @@
 
 #import "KROrderConfirmView.h"
 #import <KRArrowIconRowView.h>
+#import "KROrderCell.h"
 
 @interface KROrderConfirmView ()
 
@@ -113,8 +114,24 @@
         make.leading.trailing.equalTo(contentView);
         make.height.mas_equalTo(50);
     }];
-    
-    
+    // ---test
+    NSArray *array = @[@"",@""];
+    for (int i = 0; i < array.count; i++) {
+        KROrderCell *orderCell = [[KROrderCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"KROrderCell"];
+        [contentView addSubview:orderCell];
+        [orderCell mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(_storeNameView.mas_bottom).offset(i*95);
+            make.leading.trailing.equalTo(contentView);
+            make.height.mas_equalTo(95);
+        }];
+        if (i == array.count-1) {
+            orderCell.marginBottom = 15;
+            [orderCell mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.height.mas_equalTo(95+15);
+            }];
+        }
+    }
+    // ---
     [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.bottom.equalTo(self);
         make.height.mas_equalTo(50);
@@ -131,7 +148,7 @@
     
     
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(700);
+        make.bottom.equalTo(contentView.subviews.lastObject.mas_bottom);
     }];
     
     
@@ -140,6 +157,8 @@
     [_nameTextField.layer addSublayer:nameLineLayer];
     CALayer *genderLineLayer = [self createLineLayerWithFrame:CGRectMake(0, genderView.height, genderView.width, 0.5)];
     [genderView.layer addSublayer:genderLineLayer];
+    CALayer *storeLineLayer = [self createLineLayerWithFrame:CGRectMake(12, _storeNameView.height-0.5, _storeNameView.width-24, 0.5)];
+    [_storeNameView.layer addSublayer:storeLineLayer];
 }
 
 - (CALayer *)createLineLayerWithFrame:(CGRect)frame {

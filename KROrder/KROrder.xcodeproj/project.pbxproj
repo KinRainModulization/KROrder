@@ -22,6 +22,10 @@
 		1652590620171D6700023DF1 /* KROrderListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1652590520171D6700023DF1 /* KROrderListController.m */; };
 		1652590D201742DC00023DF1 /* KROrderConfirmController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1652590C201742DC00023DF1 /* KROrderConfirmController.m */; };
 		16525910201821BA00023DF1 /* KROrderConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1652590F201821BA00023DF1 /* KROrderConfirmView.m */; };
+		1662D4B7201AC8D900562A37 /* KROrderPayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1662D4B6201AC8D900562A37 /* KROrderPayController.m */; };
+		1662D4BA201ACA3300562A37 /* KROrderPayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1662D4B9201ACA3300562A37 /* KROrderPayView.m */; };
+		1662D4C1201B123B00562A37 /* KROrderPaySuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1662D4C0201B123B00562A37 /* KROrderPaySuccessVC.m */; };
+		1662D4C4201B125300562A37 /* KROrderPaySuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1662D4C3201B125300562A37 /* KROrderPaySuccessView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,14 @@
 		1652590C201742DC00023DF1 /* KROrderConfirmController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KROrderConfirmController.m; sourceTree = "<group>"; };
 		1652590E201821BA00023DF1 /* KROrderConfirmView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KROrderConfirmView.h; sourceTree = "<group>"; };
 		1652590F201821BA00023DF1 /* KROrderConfirmView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KROrderConfirmView.m; sourceTree = "<group>"; };
+		1662D4B5201AC8D900562A37 /* KROrderPayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KROrderPayController.h; sourceTree = "<group>"; };
+		1662D4B6201AC8D900562A37 /* KROrderPayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KROrderPayController.m; sourceTree = "<group>"; };
+		1662D4B8201ACA3300562A37 /* KROrderPayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KROrderPayView.h; sourceTree = "<group>"; };
+		1662D4B9201ACA3300562A37 /* KROrderPayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KROrderPayView.m; sourceTree = "<group>"; };
+		1662D4BF201B123B00562A37 /* KROrderPaySuccessVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KROrderPaySuccessVC.h; sourceTree = "<group>"; };
+		1662D4C0201B123B00562A37 /* KROrderPaySuccessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KROrderPaySuccessVC.m; sourceTree = "<group>"; };
+		1662D4C2201B125300562A37 /* KROrderPaySuccessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KROrderPaySuccessView.h; sourceTree = "<group>"; };
+		1662D4C3201B125300562A37 /* KROrderPaySuccessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KROrderPaySuccessView.m; sourceTree = "<group>"; };
 		1B1BD44150C7D80DF03B7368 /* Pods-KROrder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KROrder.release.xcconfig"; path = "Pods/Target Support Files/Pods-KROrder/Pods-KROrder.release.xcconfig"; sourceTree = "<group>"; };
 		5CAB0A7C85E87DE9EB44FD75 /* Pods-KROrder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KROrder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KROrder/Pods-KROrder.debug.xcconfig"; sourceTree = "<group>"; };
 		6BEB1BB2F3B4C0E58814B1AA /* libPods-KROrder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KROrder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +173,8 @@
 		165258BB2015801D00023DF1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1662D4BB201B109100562A37 /* OrderPaySuccess */,
+				1662D4B1201AC8AF00562A37 /* OrderPay */,
 				16525907201742C100023DF1 /* OrderConfirm */,
 				165258C02015D1D400023DF1 /* OrderDetail */,
 				165258BC2015D1D400023DF1 /* OrderList */,
@@ -279,6 +293,76 @@
 			children = (
 				1652590E201821BA00023DF1 /* KROrderConfirmView.h */,
 				1652590F201821BA00023DF1 /* KROrderConfirmView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1662D4B1201AC8AF00562A37 /* OrderPay */ = {
+			isa = PBXGroup;
+			children = (
+				1662D4B2201AC8AF00562A37 /* Controller */,
+				1662D4B3201AC8AF00562A37 /* Model */,
+				1662D4B4201AC8AF00562A37 /* View */,
+			);
+			path = OrderPay;
+			sourceTree = "<group>";
+		};
+		1662D4B2201AC8AF00562A37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1662D4B5201AC8D900562A37 /* KROrderPayController.h */,
+				1662D4B6201AC8D900562A37 /* KROrderPayController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1662D4B3201AC8AF00562A37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1662D4B4201AC8AF00562A37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1662D4B8201ACA3300562A37 /* KROrderPayView.h */,
+				1662D4B9201ACA3300562A37 /* KROrderPayView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1662D4BB201B109100562A37 /* OrderPaySuccess */ = {
+			isa = PBXGroup;
+			children = (
+				1662D4BC201B109100562A37 /* Controller */,
+				1662D4BD201B109100562A37 /* Model */,
+				1662D4BE201B109100562A37 /* View */,
+			);
+			path = OrderPaySuccess;
+			sourceTree = "<group>";
+		};
+		1662D4BC201B109100562A37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1662D4BF201B123B00562A37 /* KROrderPaySuccessVC.h */,
+				1662D4C0201B123B00562A37 /* KROrderPaySuccessVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1662D4BD201B109100562A37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1662D4BE201B109100562A37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1662D4C2201B125300562A37 /* KROrderPaySuccessView.h */,
+				1662D4C3201B125300562A37 /* KROrderPaySuccessView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -487,15 +571,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1652590D201742DC00023DF1 /* KROrderConfirmController.m in Sources */,
+				1662D4BA201ACA3300562A37 /* KROrderPayView.m in Sources */,
 				165258FC2016CD7400023DF1 /* KROrderListView.m in Sources */,
 				165258FF2016D00B00023DF1 /* KROrderMenuView.m in Sources */,
+				1662D4B7201AC8D900562A37 /* KROrderPayController.m in Sources */,
 				1652588E2015777A00023DF1 /* ViewController.m in Sources */,
 				1652590620171D6700023DF1 /* KROrderListController.m in Sources */,
 				16525910201821BA00023DF1 /* KROrderConfirmView.m in Sources */,
 				165258992015777A00023DF1 /* main.m in Sources */,
+				1662D4C1201B123B00562A37 /* KROrderPaySuccessVC.m in Sources */,
 				1652588B2015777A00023DF1 /* AppDelegate.m in Sources */,
 				165258C62015D6DF00023DF1 /* KROrderController.m in Sources */,
 				165259032016DEC900023DF1 /* KROrderCell.m in Sources */,
+				1662D4C4201B125300562A37 /* KROrderPaySuccessView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

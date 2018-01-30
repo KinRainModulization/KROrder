@@ -10,6 +10,7 @@
 #import <BaseNavigationController.h>
 #import "KROrderController.h"
 #import "KROrderConfirmController.h"
+#import "KROrderPayController.h"
 
 @interface AppDelegate ()
 

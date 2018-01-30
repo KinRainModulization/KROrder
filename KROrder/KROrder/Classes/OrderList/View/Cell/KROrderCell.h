@@ -10,4 +10,9 @@
 
 @interface KROrderCell : UITableViewCell
 
+// default 15
+@property (nonatomic, assign) CGFloat marginTop;
+
+// default 0
+@property (nonatomic, assign) CGFloat marginBottom;
 @end
